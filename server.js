@@ -9,4 +9,7 @@ app.use(logger('dev'));
 
 app.use(bodyParser.json());
 
+const setsRouter = require('./routes/sets');
+app.use('/sets', setsRouter);
+
 app.listen(PORT, () => {console.log('Free hugs at port', PORT)});
